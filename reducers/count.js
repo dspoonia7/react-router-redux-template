@@ -1,15 +1,17 @@
 import { INCREASE, DECREASE } from '../constants'
 
 const initialState = {
-  number: 1
+  text: ''
 }
 
 export default function update(state = initialState, action) {
-  if(action.type === INCREASE) {
-    return { number: state.number + action.amount }
+  switch (action.type) {
+    case 'UPDATE_TEXT':
+      return {
+        ...state,
+        text: action.data,
+      }
+    default:
+      return state;
   }
-  else if(action.type === DECREASE) {
-    return { number: state.number - action.amount }
-  }
-  return state
 }

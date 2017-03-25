@@ -1,22 +1,28 @@
 import React from 'react'
 import { Link, browserHistory } from 'react-router'
 
-export default function App({ children }) {
-  return (
-    <div>
-      <header>
-        Links:
-        {' '}
-        <Link to="/">Home</Link>
-        {' '}
-        <Link to="/foo">Foo</Link>
-        {' '}
-        <Link to="/bar">Bar</Link>
-      </header>
+export default class App extends React.Component {
+
+  render() {
+    const { children } = this.props
+    console.log('this.props', this.props)
+
+    return (
       <div>
-        <button onClick={() => browserHistory.push('/foo')}>Go to /foo</button>
+        <header>
+          <div className="nav-link">
+            <Link to="/">Home</Link>
+          </div>
+          <div className="nav-link">
+            <Link to="/foo">Foo</Link>
+          </div>
+          <div className="nav-link">
+            <Link to="/bar">Bar</Link>
+          </div>
+        </header>
+        <br />
+        <div style={{ marginTop: '1.5em' }}>{children}</div>
       </div>
-      <div style={{ marginTop: '1.5em' }}>{children}</div>
-    </div>
-  )
+    )
+  }
 }

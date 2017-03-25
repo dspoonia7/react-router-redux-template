@@ -1,15 +1,7 @@
-import { INCREASE, DECREASE } from '../constants'
 
-export function increase(n) {
+export function updateText(text) {
   return {
-    type: INCREASE,
-    amount: n
-  }
-}
-
-export function decrease(n) {
-  return {
-    type: DECREASE,
-    amount: n
+    type: 'UPDATE_TEXT',
+    data: text
   }
 }
