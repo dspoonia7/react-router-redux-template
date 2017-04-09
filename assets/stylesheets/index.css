@@ -1,0 +1,26 @@
+
+.nav-link {
+  padding: 5px 10px;
+  float: left;
+}
+
+.nav-link a {
+  text-decoration: none;
+}
+
+.app-wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  padding: 8px;
+}
+
+.active-page {
+  font-weight: bold;
+}
+
+.page-wrapper {
+  padding: 10px 20px;
+}
